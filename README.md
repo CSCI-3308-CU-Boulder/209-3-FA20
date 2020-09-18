@@ -1,5 +1,4 @@
 Project Team Members:
-
 This is an epic README, edited by Sam Falberg!!!!
 # 209-3-FA20
 Matt Moran
@@ -8,6 +7,9 @@ Daniel Migdale
 Sam Blackwood
 macsbranch
 Mac Long
-=======
 Dom Lee
+macsbranch
+master
+why am I editing this again
+not sure but I am too
 master
