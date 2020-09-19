@@ -1,1 +1,5 @@
-Bop Bop Bip First line of a file.
+<<<<<<< HEAD
+Beep Boop, First line of a file.
+=======
+Beep Boop, First line of a file.
+>>>>>>> 99ef170b97384a493905603cf1d66311b05950d6
