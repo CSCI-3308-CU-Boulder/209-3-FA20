@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+	  background-image: url('BackgroundTest.png');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+	.topnav {
+  	overflow: hidden;
+  	background-color: #333;
+	}
+
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+ 		padding: 14px 16px;
+  		text-decoration: none;
+  		font-size: 17px;
+	}
+
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+	.topnav a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	}
+</style>
+
+<html lang="en">
+  <head>
+
+<script>
+function readfile() {
+    //alert(document.getElementById('iframe').contentDocument.body.firstChild.innerHTML);
+    document.getElementById('idframe');
+}
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Scoreboard</title>
+	<link rel='icon' href='2020Fire.jpg' type='image/x-icon'/>
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="../resources/css/my_style.css" rel="stylesheet">
+  </head>
+  <div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="leaderboard.html">Leaderboard</a>
+  <a href="registration.html">Registration</a>
+  <a href="contact.html">Contact</a>
+</div>
+  <body>
+	<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="home.html">
+		<img class="rounded-circle" src="2020Fire.jpg" alt="" width="50" height="50">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="Home.html">Home</a>
+		  </li>
+		</ul>
+	  </div>
+	</nav>-->
+		<table class="table table-bordered table-dark">
+				<tbody>
+				  <tr>
+					<th scope="col">Players</th>
+					<th scope="col">Scores</th>
+				  </tr>
+				  <tr>
+					<th scope="row">Random</th>
+					<td><iframe id='iframe' src = 'test.txt' onload='readfile()'> </iframe></td> </iframe>
+				  </tr>
+				  <tr>
+					<th scope="row">People</th>
+					<td><iframe id='iframe' src = 'test.txt' onload='readfile()'> </iframe></td>
+				  </tr>
+				  <tr>
+					<th scope="row">Number Test</th>
+					<td><iframe id='iframe' src = 'test.txt' onload='readfile()'> </iframe></td>
+				  </tr>
+				</tbody>
+		</table>
+		
+		</div>
+	</body>
+</html>
