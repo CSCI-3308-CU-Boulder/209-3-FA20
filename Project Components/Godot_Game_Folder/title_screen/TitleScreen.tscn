@@ -53,17 +53,15 @@ alignment = 1
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_top = 153.0
 margin_bottom = 213.0
-rect_min_size = Vector2( 360, 60 )
+scene_to_load = "res://demoworld.tscn"
 
 [node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
 margin_top = 217.0
 margin_bottom = 277.0
-rect_min_size = Vector2( 360, 60 )
 
 [node name="SettingsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
 margin_top = 281.0
 margin_bottom = 341.0
-rect_min_size = Vector2( 360, 60 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
