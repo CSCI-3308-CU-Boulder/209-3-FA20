@@ -71,16 +71,34 @@ p {
 </div>
 
 <div class="content">
-  <form action = "?action=save" name="myform" method="post">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="uname">Username:</label><br>
-  <input type="text" id="uname" name="uname"><br>
-  <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"><br>
-   <input type="submit" value="save">
+  <form  method="POST"  action="registered.php">
+            First name:<br>
+            <input  type="text"  name="firstname">
+            <br>
+            Last name:<br>
+            <input  type="text"  name="lastname">
+            <br><br>
+            Username:<br>
+            <input  type="text"  name="username">
+            <br><br>
+            Email:<br>
+            <input  type="text"  name="email">
+            <br><br>
+            <input  type="submit"  name="submit">
+        </form>
+   
+   	
+   
   </form>
   </div>
 </body>
+
+<?php
+$db = pg_connect("host=localhost port=5432 dbname=info_db user=maclong password=Mlong89_");
+$query = "INSERT INTO book VALUES ('$_POST[bookid]','$_POST[book_name]',
+'$_POST[author]','$_POST[publisher]','$_POST[dop]',
+'$_POST[price]')";
+$result = pg_query($query); 
+?>
+}
+?>
