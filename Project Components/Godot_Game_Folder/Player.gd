@@ -23,10 +23,10 @@ func _physics_process(_delta):
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -400
-	#if motion.x < 0:
-		#sprite.flip_h = true
-	#elif motion.x > 0:
-		#sprite.flip_h = false
+	if motion.x > 0:
+		get_node("icon").flip_h = false
+	elif motion.x < 0:
+		get_node("icon").flip_h = true
 			
 	motion = move_and_slide(motion, UP) #updating motion to make gravity look more normal
 	pass
