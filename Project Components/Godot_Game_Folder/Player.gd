@@ -3,6 +3,9 @@ extends KinematicBody2D
 const UP = Vector2(0,-1)
 var motion = Vector2()
 var hasKey = false
+var spawnpoint = get_position() + Vector2(200,200)
+func _ready():
+	spawnpoint = get_position() 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
@@ -20,6 +23,10 @@ func _physics_process(_delta):
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -400
+	#if motion.x < 0:
+		#sprite.flip_h = true
+	#elif motion.x > 0:
+		#sprite.flip_h = false
 			
 	motion = move_and_slide(motion, UP) #updating motion to make gravity look more normal
 	pass
@@ -27,7 +34,9 @@ func _physics_process(_delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Enemy"):
-		hide()
+		motion.x = 0
+		motion.y = 0
+		set_position(spawnpoint)
 	if body.is_in_group("Key"):
 		body.queue_free()
 		hasKey = true
