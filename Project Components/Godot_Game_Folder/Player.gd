@@ -4,6 +4,7 @@ const UP = Vector2(0,-1)
 var motion = Vector2()
 var hasKey = false
 var spawnpoint = get_position() + Vector2(200,200)
+var total_score = 0;
 func _ready():
 	spawnpoint = get_position() 
 
@@ -38,6 +39,7 @@ func _on_body_entered(body):
 		motion.y = 0
 		set_position(spawnpoint)
 	if body.is_in_group("Key"):
+		total_score += 10; # test value
 		body.queue_free()
 		hasKey = true
 	pass 

@@ -384,3 +384,18 @@ position = Vector2( 1403.75, 376 )
 
 [node name="Key" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1088, 448 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 52.0
+margin_right = 1024.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="Control"]
+margin_right = 1019.0
+margin_bottom = 55.0
+text = "0"
+align = 1
+valign = 1
