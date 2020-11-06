@@ -4,10 +4,10 @@
 [ext_resource path="res://Enemy.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.7476, 25.5357 )
+extents = Vector2( 24.2854, 22.2357 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 26.1488, 7.89702 )
+extents = Vector2( 23.4497, 20.1669 )
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "Enemy",
@@ -20,12 +20,12 @@ scale = Vector2( 0.259454, 0.259454 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.985458, -0.164246 )
+position = Vector2( -0.485458, -4.16425 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1.1497, -22.7331 )
+position = Vector2( -1.1497, -1.2331 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
