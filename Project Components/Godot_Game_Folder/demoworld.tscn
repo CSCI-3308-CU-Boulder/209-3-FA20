@@ -4,7 +4,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://pixelgrass.png" type="Texture" id=4]
-[ext_resource path="res://Timer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Timer.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 70, 35 )
@@ -24,12 +24,6 @@ limit_top = 0
 limit_bottom = 600
 limit_smoothed = true
 smoothing_enabled = true
-
-[node name="Timer" parent="Player/Camera2D" instance=ExtResource( 5 )]
-margin_left = -32.3187
-margin_top = -50.6946
-margin_right = 39.6813
-margin_bottom = -19.6946
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 99.25, 385 )
@@ -385,17 +379,17 @@ position = Vector2( 1403.75, 376 )
 [node name="Key" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1088, 448 )
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
 margin_left = 52.0
-margin_right = 1024.0
-margin_bottom = 40.0
+margin_right = 186.0
+margin_bottom = 55.0
+text = "Timer: 00:00:00
+"
+align = 1
+valign = 1
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="ScoreLabel" type="Label" parent="Control"]
-margin_right = 1019.0
-margin_bottom = 55.0
-text = "0"
-align = 1
-valign = 1
