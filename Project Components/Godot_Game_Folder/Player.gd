@@ -30,6 +30,8 @@ func _physics_process(_delta):
 		get_node("icon").flip_h = true
 			
 	motion = move_and_slide(motion, UP) #updating motion to make gravity look more normal
+	if(get_position().y > 700):
+		set_position(spawnpoint)
 	pass
 
 
