@@ -37,13 +37,13 @@ __meta__ = {
 }
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 121.227, 541.401 )
+position = Vector2( 245.474, 420.185 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="ParallaxBackground"]
 
 [node name="Level1_Background" type="Sprite" parent="ParallaxBackground/ParallaxBackground"]
-position = Vector2( 605.364, 379.043 )
+position = Vector2( 699.307, 1106.34 )
 scale = Vector2( 4.25988, 4.25988 )
 texture = ExtResource( 5 )
