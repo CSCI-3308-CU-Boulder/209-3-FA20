@@ -7,6 +7,7 @@
 [ext_resource path="res://Level1_Background.jpeg" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 67.8823, -12.7279 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.2, 0.2 )
@@ -36,7 +37,7 @@ __meta__ = {
 }
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 285.276, 449.477 )
+position = Vector2( 121.227, 541.401 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
