@@ -13,7 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time+=delta
-	text = "Time: " + str(get_time())
+	# display time to the hundredth place
+	text = "Time: " + str(stepify(get_time(),.01))
 	pass
 	
 func get_time():
