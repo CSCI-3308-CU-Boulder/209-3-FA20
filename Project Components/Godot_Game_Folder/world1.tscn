@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Timer.gd" type="Script" id=3]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Level1_Background.jpeg" type="Texture" id=5]
+[ext_resource path="res://Pause.gd" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 67.8823, -12.7279 )
@@ -47,3 +48,25 @@ position = Vector2( 245.474, 420.185 )
 position = Vector2( 699.307, 1106.34 )
 scale = Vector2( 4.25988, 4.25988 )
 texture = ExtResource( 5 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Pause" type="Control" parent="CanvasLayer2"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 67.8823
+margin_top = -12.7279
+margin_right = 67.8823
+margin_bottom = -12.7279
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="CanvasLayer2/Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.352941 )
