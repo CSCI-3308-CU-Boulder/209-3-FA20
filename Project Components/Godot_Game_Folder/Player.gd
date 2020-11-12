@@ -22,7 +22,8 @@ func _physics_process(_delta):
 	elif motion.x < -400:
 		motion.x = -400
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_up"):
+		# Allow player to jump while moving right or left, or while standing still
+		if Input.is_action_just_pressed("ui_up") || (Input.is_action_just_pressed("ui_up") && Input.is_action_pressed("ui_left")) || (Input.is_action_just_pressed("ui_up") && Input.is_action_pressed("ui_right")):
 			motion.y = -400
 	if motion.x > 0:
 		get_node("icon").flip_h = false
