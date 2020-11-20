@@ -23,6 +23,7 @@ tile_data = PoolIntArray( 1377083, 0, 0, 1377084, 0, 0, 1377085, 0, 0, 1377086, 
 position = Vector2( 510, 301.343 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 100
@@ -45,3 +46,48 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 1 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1637.58, 492.098 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2950.25, 383.801 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2201.75, 379.328 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3101.35, 453.443 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3726.54, 446.096 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4119.16, 338.118 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4564.8, 179.984 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5280.08, 88.9378 )
+
+[node name="Enemy11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5849.04, 488.584 )
+
+[node name="Enemy12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6411.29, 523.725 )
+
+[node name="Enemy13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6928.18, 422.455 )
+
+[node name="Enemy14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8758.05, 546.726 )
+
+[node name="Enemy15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7531, 254.1 )
+
+[node name="Enemy16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7448.26, 399.135 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1821.27, 495.292 )
