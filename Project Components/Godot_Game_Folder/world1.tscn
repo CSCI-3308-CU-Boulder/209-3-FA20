@@ -25,6 +25,13 @@ position = Vector2( 598.212, 398.737 )
 position = Vector2( 6.10352e-05, -1.41422 )
 current = true
 
+[node name="LevelComplete" type="AcceptDialog" parent="Player"]
+margin_left = -598.212
+margin_top = -398.737
+margin_right = -486.212
+margin_bottom = -340.737
+dialog_text = "you done did it"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer"]
@@ -79,11 +86,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="ColorRect" parent="CanvasLayer2/Pause"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.352941 )
-
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1448.84, 322.727 )
 
@@ -114,9 +116,6 @@ position = Vector2( 5638.75, 464.448 )
 [node name="Enemy15" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6129.89, 464.142 )
 
-[node name="Enemy16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6788.7, 388.7 )
-
 [node name="Enemy17" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6762.74, 231.403 )
 
@@ -127,4 +126,5 @@ position = Vector2( 7754.79, 276.607 )
 position = Vector2( 7400.79, 447.038 )
 
 [node name="Key" parent="." instance=ExtResource( 7 )]
-position = Vector2( 8226.68, 386.562 )
+position = Vector2( 258.321, 407.335 )
+scale = Vector2( 0.15, 0.15 )
