@@ -5,6 +5,7 @@ var motion = Vector2()
 var hasKey = false
 var spawnpoint = get_position() + Vector2(200,200)
 var total_score = 0
+onready var popup = get_node('../CanvasLayer3/LevelComplete')
 func _ready():
 	spawnpoint = get_position() 
 
@@ -46,5 +47,5 @@ func _on_body_entered(body):
 		body.queue_free()
 		hasKey = true
 		get_tree().paused = true
-		get_node("LevelComplete").show()
+		popup._setupPopupMenu()
 	pass 

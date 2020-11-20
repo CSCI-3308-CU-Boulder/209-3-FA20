@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Level1_Background.jpeg" type="Texture" id=5]
 [ext_resource path="res://Pause.gd" type="Script" id=6]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://LevelComplete.gd" type="Script" id=8]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 67.8823, -12.7279 )
@@ -24,13 +25,6 @@ position = Vector2( 598.212, 398.737 )
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 6.10352e-05, -1.41422 )
 current = true
-
-[node name="LevelComplete" type="AcceptDialog" parent="Player"]
-margin_left = -598.212
-margin_top = -398.737
-margin_right = -486.212
-margin_bottom = -340.737
-dialog_text = "you done did it"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -85,6 +79,15 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="LevelComplete" type="PopupMenu" parent="CanvasLayer3"]
+margin_left = 67.8823
+margin_top = -12.7279
+margin_right = 87.8823
+margin_bottom = 7.2721
+script = ExtResource( 8 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1448.84, 322.727 )
