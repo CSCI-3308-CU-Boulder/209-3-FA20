@@ -5,9 +5,9 @@
 [ext_resource path="res://Timer.gd" type="Script" id=3]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Level1_Background.jpeg" type="Texture" id=5]
-[ext_resource path="res://Pause.gd" type="Script" id=6]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=7]
-[ext_resource path="res://LevelComplete.gd" type="Script" id=8]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=9]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 67.8823, -12.7279 )
@@ -66,28 +66,14 @@ texture = ExtResource( 5 )
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="Pause" type="Control" parent="CanvasLayer2"]
-pause_mode = 2
+[node name="Pause" parent="CanvasLayer2" instance=ExtResource( 6 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 67.8823
-margin_top = -12.7279
-margin_right = 67.8823
-margin_bottom = -12.7279
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="FinishCanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
 
-[node name="LevelComplete" type="PopupMenu" parent="FinishCanvasLayer"]
-margin_left = 67.8823
-margin_top = -12.7279
-margin_right = 87.8823
-margin_bottom = 7.2721
-script = ExtResource( 8 )
+[node name="LevelComplete" parent="FinishCanvasLayer" instance=ExtResource( 9 )]
+visible = false
 
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1448.84, 322.727 )

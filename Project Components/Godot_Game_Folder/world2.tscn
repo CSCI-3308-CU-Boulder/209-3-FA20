@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://tileset2.tres" type="TileSet" id=1]
-[ext_resource path="res://Pause.gd" type="Script" id=2]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Timer.gd" type="Script" id=6]
-[ext_resource path="res://LevelComplete.gd" type="Script" id=7]
+[ext_resource path="res://GameComplete.gd" type="Script" id=7]
+[ext_resource path="res://title_screen/fonts/prstart_30.tres" type="DynamicFont" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,15 +29,8 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="Pause" type="Control" parent="CanvasLayer"]
-pause_mode = 2
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 2 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Enemy2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1637.58, 492.098 )
@@ -84,11 +78,52 @@ position = Vector2( 7405.57, 401.201 )
 position = Vector2( 1821.27, 495.292 )
 
 [node name="FinishCanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
 
-[node name="LevelComplete" type="PopupMenu" parent="FinishCanvasLayer"]
-margin_right = 20.0
-margin_bottom = 20.0
+[node name="LevelComplete" type="Control" parent="FinishCanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="FinishCanvasLayer/LevelComplete"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.494118 )
+
+[node name="CenterContainer" type="CenterContainer" parent="FinishCanvasLayer/LevelComplete"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FinishCanvasLayer/LevelComplete/CenterContainer"]
+margin_left = 356.0
+margin_top = 274.0
+margin_right = 668.0
+margin_bottom = 326.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="FinishCanvasLayer/LevelComplete/CenterContainer/VBoxContainer"]
+margin_right = 312.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+align = 1
+uppercase = true
+
+[node name="ToTitleButton" type="Button" parent="FinishCanvasLayer/LevelComplete/CenterContainer/VBoxContainer"]
+margin_top = 25.0
+margin_right = 312.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 8 )
+text = "Return to Title"
 
 [node name="Key" parent="." instance=ExtResource( 4 )]
 position = Vector2( 9395.48, 474.864 )
@@ -106,3 +141,4 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="FinishCanvasLayer/LevelComplete/CenterContainer/VBoxContainer/ToTitleButton" to="FinishCanvasLayer/LevelComplete" method="_on_ToTitleButton_pressed"]
