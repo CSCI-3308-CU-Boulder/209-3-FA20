@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://tileset2.tres" type="TileSet" id=1]
 [ext_resource path="res://Pause.gd" type="Script" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Timer.gd" type="Script" id=6]
 [ext_resource path="res://LevelComplete.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
@@ -92,3 +93,16 @@ script = ExtResource( 7 )
 [node name="Key" parent="." instance=ExtResource( 4 )]
 position = Vector2( 9395.48, 474.864 )
 scale = Vector2( 0.15, 0.15 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer2"]
+margin_left = 462.0
+margin_top = 2.0
+margin_right = 561.0
+margin_bottom = 16.0
+text = "timer: 00:00:00"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
