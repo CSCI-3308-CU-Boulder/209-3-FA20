@@ -3,10 +3,9 @@
 [ext_resource path="res://tileset2.tres" type="TileSet" id=1]
 [ext_resource path="res://Pause.gd" type="Script" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://syringe.png" type="Texture" id=4]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
-
-[sub_resource type="RectangleShape2D" id=1]
+[ext_resource path="res://LevelComplete.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -37,15 +36,6 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-shape = SubResource( 1 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1637.58, 492.098 )
@@ -87,7 +77,18 @@ position = Vector2( 8758.05, 546.726 )
 position = Vector2( 7531, 254.1 )
 
 [node name="Enemy16" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7448.26, 399.135 )
+position = Vector2( 7405.57, 401.201 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1821.27, 495.292 )
+
+[node name="FinishCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelComplete" type="PopupMenu" parent="FinishCanvasLayer"]
+margin_right = 20.0
+margin_bottom = 20.0
+script = ExtResource( 7 )
+
+[node name="Key" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9395.48, 474.864 )
+scale = Vector2( 0.15, 0.15 )

@@ -1,6 +1,5 @@
 extends PopupMenu
 
-
 var time = 0.0
 	
 func _ready():

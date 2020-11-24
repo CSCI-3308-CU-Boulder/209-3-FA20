@@ -80,9 +80,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+[node name="FinishCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="LevelComplete" type="PopupMenu" parent="CanvasLayer3"]
+[node name="LevelComplete" type="PopupMenu" parent="FinishCanvasLayer"]
 margin_left = 67.8823
 margin_top = -12.7279
 margin_right = 87.8823
@@ -129,5 +129,5 @@ position = Vector2( 7754.79, 276.607 )
 position = Vector2( 7400.79, 447.038 )
 
 [node name="Key" parent="." instance=ExtResource( 7 )]
-position = Vector2( 258.321, 407.335 )
+position = Vector2( 8226.68, 386.562 )
 scale = Vector2( 0.15, 0.15 )
