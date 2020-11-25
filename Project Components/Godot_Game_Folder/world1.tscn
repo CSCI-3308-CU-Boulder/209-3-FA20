@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Level1_Background.jpeg" type="Texture" id=5]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://title_screen/fonts/prstart_30.tres" type="DynamicFont" id=8]
 [ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=9]
 
 [node name="Node2D" type="Node2D"]
@@ -30,10 +31,14 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer"]
-margin_left = 462.787
-margin_top = 2.58578
-margin_right = 561.787
-margin_bottom = 16.5858
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -49.5
+margin_top = 10.0
+margin_right = 49.5
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "timer: 00:00:00"
 script = ExtResource( 3 )
 __meta__ = {

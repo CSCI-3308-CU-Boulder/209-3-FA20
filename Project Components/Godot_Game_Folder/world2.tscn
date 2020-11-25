@@ -135,10 +135,14 @@ scale = Vector2( 0.15, 0.15 )
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer2"]
-margin_left = 462.0
-margin_top = 2.0
-margin_right = 561.0
-margin_bottom = 16.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -150.0
+margin_top = 10.0
+margin_right = 150.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "timer: 00:00:00"
 script = ExtResource( 6 )
 __meta__ = {
