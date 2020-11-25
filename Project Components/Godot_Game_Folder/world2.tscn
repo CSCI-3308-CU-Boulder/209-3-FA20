@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://tileset2.tres" type="TileSet" id=1]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Timer.gd" type="Script" id=6]
 [ext_resource path="res://GameComplete.gd" type="Script" id=7]
 [ext_resource path="res://title_screen/fonts/prstart_30.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Level2_Background.jpeg" type="Texture" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -143,4 +144,13 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="ParallaxBackground"]
+
+[node name="Level2_Background" type="Sprite" parent="ParallaxBackground/ParallaxBackground"]
+position = Vector2( 500, 316 )
+scale = Vector2( 4.26, 4.26 )
+texture = ExtResource( 9 )
 [connection signal="pressed" from="FinishCanvasLayer/LevelComplete/CenterContainer/VBoxContainer/ToTitleButton" to="FinishCanvasLayer/LevelComplete" method="_on_ToTitleButton_pressed"]
