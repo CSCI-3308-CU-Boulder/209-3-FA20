@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://title_screen/fonts/prstart.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://title_screen/buttons/SettingsButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://title_screen/buttons/NewGameButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://title_screen/buttons/ContinueButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://title_screen/title_screen.gd" type="Script" id=5]
 [ext_resource path="res://title_screen/sounds/sawsquarenoise_-_03_-_Towel_Defence_Ingame.ogg" type="AudioStream" id=6]
 
@@ -51,17 +50,13 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 153.0
-margin_bottom = 213.0
+margin_top = 185.0
+margin_bottom = 245.0
 scene_to_load = "res://world1.tscn"
 
-[node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
-margin_top = 217.0
-margin_bottom = 277.0
-
 [node name="SettingsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 281.0
-margin_bottom = 341.0
+margin_top = 249.0
+margin_bottom = 309.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

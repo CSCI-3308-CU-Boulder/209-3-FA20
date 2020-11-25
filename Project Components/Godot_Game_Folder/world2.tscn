@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tileset2.tres" type="TileSet" id=1]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=2]
@@ -9,11 +9,15 @@
 [ext_resource path="res://GameComplete.gd" type="Script" id=7]
 [ext_resource path="res://title_screen/fonts/prstart_30.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Level2_Background.jpeg" type="Texture" id=9]
+[ext_resource path="res://Enemy2.gd" type="Script" id=10]
+[ext_resource path="res://Enemy3.gd" type="Script" id=11]
+[ext_resource path="res://Enemy4.gd" type="Script" id=12]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1177.83, 447.766 )
+position = Vector2( 1139.65, 457.666 )
+script = ExtResource( 10 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.1, 0.1 )
@@ -36,49 +40,59 @@ layer = 100
 visible = false
 
 [node name="Enemy2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1656.7, 492.098 )
+position = Vector2( 1659.53, 507.654 )
+script = ExtResource( 11 )
 
 [node name="Enemy5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2960.68, 352.518 )
+position = Vector2( 3532.02, 219.582 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2241.72, 344.57 )
+position = Vector2( 2166.77, 358.712 )
+script = ExtResource( 10 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 3101.35, 453.443 )
+position = Vector2( 3067.41, 454.857 )
+script = ExtResource( 11 )
 
 [node name="Enemy7" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3726.54, 446.096 )
 
 [node name="Enemy8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4120.9, 352.021 )
+position = Vector2( 4069.99, 359.092 )
+script = ExtResource( 10 )
 
 [node name="Enemy9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4542.21, 155.653 )
+position = Vector2( 4443.22, 162.724 )
+script = ExtResource( 11 )
 
 [node name="Enemy10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 5344.38, 61.131 )
+position = Vector2( 5283.57, 66.7879 )
+script = ExtResource( 10 )
 
 [node name="Enemy11" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5857.73, 500.749 )
 
 [node name="Enemy12" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6402.6, 499.394 )
+position = Vector2( 6391.29, 509.293 )
+script = ExtResource( 12 )
 
 [node name="Enemy13" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6924.7, 398.124 )
+position = Vector2( 6779.04, 412.266 )
+script = ExtResource( 11 )
 
 [node name="Enemy14" parent="." instance=ExtResource( 5 )]
-position = Vector2( 8758.05, 546.726 )
+position = Vector2( 8811.79, 558.04 )
+script = ExtResource( 10 )
 
 [node name="Enemy15" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7525.79, 196.749 )
+position = Vector2( 7521.55, 212.305 )
 
 [node name="Enemy16" parent="." instance=ExtResource( 5 )]
-position = Vector2( 7403.83, 352.539 )
+position = Vector2( 7399.59, 359.61 )
+script = ExtResource( 12 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1793.46, 488.34 )
+position = Vector2( 2646.23, 312.978 )
 
 [node name="FinishCanvasLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -157,4 +171,15 @@ __meta__ = {
 position = Vector2( 745.379, 451.983 )
 scale = Vector2( 5.23487, 5.67407 )
 texture = ExtResource( 9 )
+
+[node name="Enemy17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4750.44, 461.23 )
+script = ExtResource( 12 )
+
+[node name="Enemy18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8254.01, 218.834 )
+
+[node name="Enemy19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9106.5, 509.596 )
+script = ExtResource( 12 )
 [connection signal="pressed" from="FinishCanvasLayer/LevelComplete/CenterContainer/VBoxContainer/ToTitleButton" to="FinishCanvasLayer/LevelComplete" method="_on_ToTitleButton_pressed"]

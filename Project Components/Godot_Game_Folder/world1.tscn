@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://title_screen/fonts/prstart_30.tres" type="DynamicFont" id=8]
 [ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemy2.gd" type="Script" id=10]
+[ext_resource path="res://Enemy3.gd" type="Script" id=11]
+[ext_resource path="res://Enemy4.gd" type="Script" id=12]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 67.8823, -12.7279 )
@@ -46,16 +49,19 @@ __meta__ = {
 }
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1076.21, 467.502 )
+position = Vector2( 1045.8, 467.502 )
+script = ExtResource( 10 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 738.748, 423.341 )
 
 [node name="Enemy5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2753.04, 332.195 )
+position = Vector2( 2695.06, 332.195 )
+script = ExtResource( 10 )
 
 [node name="Enemy6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1803.21, 287.959 )
+position = Vector2( 1756.54, 286.545 )
+script = ExtResource( 10 )
 
 [node name="Enemy7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1806.2, 480.33 )
@@ -83,43 +89,63 @@ visible = false
 
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1448.84, 322.727 )
+script = ExtResource( 11 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3066.11, 358.768 )
 
 [node name="Enemy8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3458.59, 360.295 )
+position = Vector2( 3956.39, 288.17 )
+script = ExtResource( 11 )
 
 [node name="Enemy9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3232.57, 358.768 )
+position = Vector2( 3345.71, 374.324 )
+script = ExtResource( 12 )
 
 [node name="Enemy10" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4249.35, 403.361 )
+script = ExtResource( 12 )
 
 [node name="Enemy11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3935.81, 400.377 )
+position = Vector2( 3812.77, 420.176 )
 
 [node name="Enemy12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 5050.8, 443.067 )
+position = Vector2( 5076.26, 452.966 )
+script = ExtResource( 11 )
 
 [node name="Enemy13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4840.05, 264.389 )
+position = Vector2( 4797.62, 284.188 )
+script = ExtResource( 10 )
 
 [node name="Enemy14" parent="." instance=ExtResource( 4 )]
 position = Vector2( 5638.75, 464.448 )
+script = ExtResource( 10 )
 
 [node name="Enemy15" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6129.89, 464.142 )
 
 [node name="Enemy17" parent="." instance=ExtResource( 4 )]
 position = Vector2( 6762.74, 231.403 )
+script = ExtResource( 10 )
 
 [node name="Enemy19" parent="." instance=ExtResource( 4 )]
 position = Vector2( 7754.79, 276.607 )
+script = ExtResource( 11 )
 
 [node name="Enemy18" parent="." instance=ExtResource( 4 )]
 position = Vector2( 7400.79, 447.038 )
+script = ExtResource( 12 )
 
 [node name="Key" parent="." instance=ExtResource( 7 )]
 position = Vector2( 8226.68, 386.562 )
 scale = Vector2( 0.15, 0.15 )
+
+[node name="Enemy20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4697.88, 552.881 )
+
+[node name="Enemy21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6142.64, 190.276 )
+script = ExtResource( 10 )
+
+[node name="Enemy22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8052.4, 469.159 )
