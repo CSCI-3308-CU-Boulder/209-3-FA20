@@ -1,4 +1,4 @@
-Our projecet consists of a website that hosts a platformer video game that we created. The game is called "2020: The Game" and aims to give a lighthearted take on the year 2020 and all the crazy things that have happened. In the game, you play as a character named Common Sense and have to navigate your way past coronavirus sprites en route to obtaining the cure for COVID-19.
+Our project consists of a website that hosts a platformer video game that we created. The game is called "2020: The Game" and aims to give a lighthearted take on the year 2020 and all the crazy things that have happened. In the game, you play as a character named Common Sense and have to navigate your way past coronavirus sprites en route to obtaining the cure for COVID-19.
 
 One can run our project in one of two ways:
 1) access through our website which is hosted on Heroku at http://twentytwentygame.herokuapp.com
