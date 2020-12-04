@@ -2,7 +2,7 @@ Our project consists of a website that hosts a platformer video game that we cre
 
 One can run our project in one of two ways:
 1) access through our website which is hosted on Heroku at http://twentytwentygame.herokuapp.com
-2) the other way is to download the game engine Godot, clone our repository, and run the game from there on your local machine
+2) the other way is to download the game engine Godot, clone our repository, and run the game on your local machine
 
 Our Repository structure consists of two main folders:
 1) a folder for our project milestones and
